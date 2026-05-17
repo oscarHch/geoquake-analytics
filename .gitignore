@@ -1,0 +1,10 @@
+# Entornos virtuales
+venv/
+.env
+
+# Archivos temporales de Python
+__pycache__/
+*.pyc
+
+# Archivos temporales de Power BI
+*.pbix.lck
