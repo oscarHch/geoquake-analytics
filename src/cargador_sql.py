@@ -6,8 +6,9 @@ def cargar_en_sql(df_sismos):
         print("> No hay datos válidos para cargar en SQL.")
         return
 
-    ruta_db = "db/sismos.db"
-    os.makedirs("db", exist_ok=True)
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    ruta_db = os.path.join(base_dir, "db", "sismos.db")
+    os.makedirs(os.path.join(base_dir, "db"), exist_ok=True)
 
     print(f"> Conectando a la base de datos en {ruta_db}...")
     conexion = sqlite3.connect(ruta_db)

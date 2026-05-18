@@ -4,9 +4,7 @@ import pandas as pd
 def extraer_sismos():
     # URL de la API
     url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.geojson"
-
     print("> Conectando con los servidores del USGS...")
-
     respuesta = requests.get(url)
 
     # Codigo 200 si se encuentran los datos
